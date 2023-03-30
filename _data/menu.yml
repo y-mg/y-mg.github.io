@@ -1,0 +1,18 @@
+main:
+  - name: Home
+    url: /
+    weight: 1
+  - name: Study
+    url: /study
+    weight: 2
+    child:
+      - name: "Algorithm"
+        icon: #"/assets/images/icons/wireframe-2.svg"
+        icon_darkmode: #"/assets/images/icons/wireframe-2-white.svg"
+        description: #"Default blog layout"
+        url: /blog/study/algorithm
+      - name: "Kotlin"
+        icon: #"/assets/images/icons/wireframe-2.svg"
+        icon_darkmode: #"/assets/images/icons/wireframe-2-white.svg"
+        description: #"Default blog layout"
+        url: /blog/study/kotlin
