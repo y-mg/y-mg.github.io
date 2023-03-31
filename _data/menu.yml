@@ -7,12 +7,17 @@ main:
     weight: 2
     child:
       - name: "Algorithm"
-        icon: #"/assets/images/icons/wireframe-2.svg"
-        icon_darkmode: #"/assets/images/icons/wireframe-2-white.svg"
-        description: #"Default blog layout"
+        icon: "/assets/images/menu/algorithm.png"
+        icon_darkmode: "/assets/images/menu/algorithm.png"
+        description: "Programming"
         url: /blog/study/algorithm
+      - name: "Android"
+        icon: "/assets/images/menu/android.png"
+        icon_darkmode: "/assets/images/menu/android.png"
+        description: "Programming"
+        url: /blog/study/android  
       - name: "Kotlin"
-        icon: #"/assets/images/icons/wireframe-2.svg"
-        icon_darkmode: #"/assets/images/icons/wireframe-2-white.svg"
-        description: #"Default blog layout"
+        icon: "/assets/images/menu/kotlin.png"
+        icon_darkmode: "/assets/images/menu/kotlin.png"
+        description: "Programming"
         url: /blog/study/kotlin

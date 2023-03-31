@@ -69,7 +69,7 @@ exclude:
 # -------------------
 # Theme Config
 # --------------------
-title: "Blog"
+title: "Github Pages"
 
 category_dir: 'category'
 
@@ -124,7 +124,7 @@ fonts:
   logo: "Open Sans"
 
 logo:
-  logo_text: "Blog"
+  logo_text: "Github Pages"
   logo_image: assets/images/logo.gif
   logo_image_mobile: assets/images/logo.gif
   logo_image_invert: assets/images/logo.gif
