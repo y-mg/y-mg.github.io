@@ -90,8 +90,8 @@ contact_form:
 darkmode:
   enable_dark_mode: true
   show_dark_mode_toggle_in_header: false 
-  show_dark_mode_toggle_in_bottom: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
-  show_dark_mode_toggle_in_mobile_menu: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
+  show_dark_mode_toggle_in_bottom: true # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
+  show_dark_mode_toggle_in_mobile_menu: true # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
 
 colors:
   #light-mode colors
@@ -125,10 +125,10 @@ fonts:
 
 logo:
   logo_text: "Blog"
-  logo_image: assets/images/logo.gif
-  logo_image_mobile: assets/images/logo.gif
-  logo_image_invert: assets/images/logo.gif
-  logo_image_invert_mobile: assets/images/logo.gif
+  logo_image: assets/images/config/logo-black.gif
+  logo_image_mobile: assets/images/config/logo-black.gif
+  logo_image_invert: assets/images/config/logo-white.gif
+  logo_image_invert_mobile: assets/images/config/logo-white.gif
   logo_image_desktop_height: "35px"
   logo_image_desktop_width: "35px"
   logo_image_mobile_height: "35px"
@@ -160,4 +160,4 @@ footer:
 bottom:
   enable_bottom: false # show/hide the entire bottom (below the footer)
   enable_bottom_menu: true # if enabled, the bottom menu can be edited in `_data/menu.yml`
-  copyright_text: ""
+  copyright_text: "Y-MG's Blog"
