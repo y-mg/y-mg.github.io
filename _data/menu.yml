@@ -2,22 +2,19 @@ main:
   - name: Home
     url: /
     weight: 1
+  - name: Kotlin
+    url: /kotlin
+    weight: 2
+    child:
+      - name: "Basic Syntax"
+        url: /blog/kotlin/basic-syntax
+      - name: "Coroutine"
+        url: /blog/kotlin/coroutine  
+      - name: "Reactive"
+        url: /blog/kotlin/reactive
   - name: Study
     url: /study
     weight: 2
     child:
       - name: "Algorithm"
-        icon: "/assets/images/menu/algorithm-black.png"
-        icon_darkmode: "/assets/images/menu/algorithm-white.png"
-        description: "Programming"
         url: /blog/study/algorithm
-      - name: "Android"
-        icon: "/assets/images/menu/android-black.png"
-        icon_darkmode: "/assets/images/menu/android-white.png"
-        description: "Programming"
-        url: /blog/study/android  
-      - name: "Kotlin"
-        icon: "/assets/images/menu/kotlin-black.png"
-        icon_darkmode: "/assets/images/menu/kotlin-white.png"
-        description: "Programming"
-        url: /blog/study/kotlin

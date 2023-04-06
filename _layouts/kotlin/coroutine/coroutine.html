@@ -1,6 +1,6 @@
 ---
 layout: default
-body_classes: page-blog page-algorithm
+body_classes: page-blog
 ---
 
 <div class="section">
@@ -32,7 +32,7 @@ body_classes: page-blog page-algorithm
               {% endif %}
 
               {% for post in posts %}
-                {% if post.url contains 'study/algorithm' %}
+                {% if post.url contains 'kotlin/coroutine' %}
                 <div class="col-12 col-lg-9 mb-5">
                   {% include theme/cards/card-post.html
                     date=post.date

@@ -32,7 +32,7 @@ body_classes: page-blog page-study
               {% endif %}
 
               {% for post in posts %}
-                {% if post.url contains 'algorithm' or 'android' or 'kotlin'%}
+                {% if post.url contains 'algorithm' %}
                 <div class="col-12 col-lg-4 mb-3">
                   {% include theme/cards/card-post.html
                     date=post.date
