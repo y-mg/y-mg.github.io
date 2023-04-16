@@ -1,6 +1,6 @@
 ---
 layout: default
-body_classes: page-blog page-algorithm
+body_classes: page-blog
 ---
 
 <div class="section">
@@ -8,9 +8,9 @@ body_classes: page-blog page-algorithm
     <div class="row">
       <div class="col-12">
         {% include framework/blocks/sections/title.html
-          title=page.title
-          description=page.description
-          image=page.image
+        title=page.title
+        description=page.description
+        image=page.image
         %}
       </div>
     </div>
@@ -32,8 +32,8 @@ body_classes: page-blog page-algorithm
               {% endif %}
 
               {% for post in posts %}
-                {% if post.url contains 'study/algorithm' %}
-                <div class="col-12 col-lg-9 mb-5">
+                {% if post.url contains 'android' %}
+                <div class="col-12 col-lg-4 mb-3">
                   {% include theme/cards/card-post.html
                     date=post.date
                     title=post.title
@@ -43,7 +43,6 @@ body_classes: page-blog page-algorithm
                     authors=post.authors
                     categories=post.categories
                     show_read_more=false
-                    style="row"
                   %}
                 </div>
                 {% endif %}
@@ -60,5 +59,4 @@ body_classes: page-blog page-algorithm
       {% endif %}
   </div>
 </div>
-
 

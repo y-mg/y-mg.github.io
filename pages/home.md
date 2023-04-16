@@ -1,8 +1,8 @@
 ---
 layout: home
 permalink: "/"
-title: "Today&nbsp;&nbsp;I&nbsp;&nbsp;Learned"
-description: "For&nbsp;&nbsp;personal&nbsp;&nbsp;study&nbsp;&nbsp;records."
+title: "Today,&nbsp;&nbsp;I&nbsp;&nbsp;did&nbsp;&nbsp;something"
+description: "Self&nbsp;&nbsp;Storage..."
 image: "/assets/images/config/home.gif"
 
 meta_description: "" # Jekyll Origin is a premium Jekyll blog theme"

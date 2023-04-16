@@ -1,7 +1,15 @@
 main:
   - name: Home
     url: /
-    weight: 1
+    weight: 2
+  - name: Android
+    url: /android
+    weight: 2
+    child:
+      - name: "Component"
+        url: /blog/android/component
+      - name: "Jectpack"
+        url: /blog/android/jectpack
   - name: Kotlin
     url: /kotlin
     weight: 2
@@ -12,9 +20,9 @@ main:
         url: /blog/kotlin/coroutine  
       - name: "Reactive"
         url: /blog/kotlin/reactive
-  - name: Study
-    url: /study
+  - name: Storage
+    url: /storage
     weight: 2
     child:
       - name: "Algorithm"
-        url: /blog/study/algorithm
+        url: /blog/storage/algorithm
