@@ -8,8 +8,8 @@ main:
     child:
       - name: "Component"
         url: /blog/android/component
-      - name: "Jectpack"
-        url: /blog/android/jectpack
+      - name: "Jetpack"
+        url: /blog/android/jetpack
   - name: Kotlin
     url: /kotlin
     weight: 2
