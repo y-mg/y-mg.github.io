@@ -2,7 +2,7 @@
 layout: home
 permalink: "/"
 title: "Today,&nbsp;&nbsp;I&nbsp;&nbsp;did&nbsp;&nbsp;it"
-description: "My&nbsp;&nbsp;self&nbsp;&nbsp;storage&nbsp;&nbsp;knowledge&nbsp;&nbsp;blog"
+description: "My&nbsp;&nbsp;self&nbsp;&nbsp;storage&nbsp;&nbsp;blog..."
 image: "/assets/images/config/home.gif"
 
 meta_description: "" # Jekyll Origin is a premium Jekyll blog theme"
