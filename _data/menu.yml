@@ -10,6 +10,8 @@ main:
         url: /blog/android/architecture
       - name: "Component"
         url: /blog/android/component
+      - name: "Compose"
+        url: /blog/android/compose  
       - name: "Database"
         url: /blog/android/database
       - name: "Jetpack"
