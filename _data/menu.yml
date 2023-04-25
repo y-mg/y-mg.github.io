@@ -8,8 +8,8 @@ main:
     child:
       - name: "Architecture"
         url: /blog/android/architecture
-      - name: "Component"
-        url: /blog/android/component
+      - name: "Basic"
+        url: /blog/android/basic
       - name: "Compose"
         url: /blog/android/compose  
       - name: "Database"
@@ -28,9 +28,9 @@ main:
         url: /blog/kotlin/coroutine  
       - name: "Reactive"
         url: /blog/kotlin/reactive
-  - name: Storage
-    url: /storage
-    weight: 2
-    child:
-      - name: "Algorithm"
-        url: /blog/storage/algorithm
+  # - name: Storage
+  #   url: /storage
+  #   weight: 2
+  #   child:
+  #     - name: "Algorithm"
+  #       url: /blog/storage/algorithm
