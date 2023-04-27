@@ -20,8 +20,8 @@ main:
     url: /kotlin
     weight: 2
     child:
-      - name: "Basic Syntax"
-        url: /blog/kotlin/basic-syntax
+      - name: "Basic"
+        url: /blog/kotlin/basic
       - name: "Coroutine"
         url: /blog/kotlin/coroutine  
       - name: "Reactive"

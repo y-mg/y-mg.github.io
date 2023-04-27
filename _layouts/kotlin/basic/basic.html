@@ -32,7 +32,7 @@ body_classes: page-blog
               {% endif %}
 
               {% for post in posts %}
-                {% if post.url contains 'kotlin/basic-syntax' %}
+                {% if post.url contains 'kotlin/basic' %}
                 <div class="col-12 col-lg-9 mb-5">
                   {% include theme/cards/card-post.html
                     date=post.date
