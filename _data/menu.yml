@@ -12,8 +12,6 @@ main:
         url: /blog/android/basic
       - name: "Compose"
         url: /blog/android/compose  
-      - name: "Database"
-        url: /blog/android/database
       - name: "Jetpack"
         url: /blog/android/jetpack
       - name: "Network"
