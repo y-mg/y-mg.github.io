@@ -6,16 +6,12 @@ main:
     url: /android
     weight: 2
     child:
-      - name: "Architecture"
-        url: /blog/android/architecture
       - name: "Basic"
         url: /blog/android/basic
-      - name: "Compose"
-        url: /blog/android/compose  
       - name: "Jetpack"
         url: /blog/android/jetpack
-      - name: "Network"
-        url: /blog/android/network
+      - name: "Third Party"
+        url: /blog/android/third-party
   - name: Kotlin
     url: /kotlin
     weight: 2
@@ -26,9 +22,3 @@ main:
         url: /blog/kotlin/coroutine  
       - name: "Reactive"
         url: /blog/kotlin/reactive
-  # - name: Storage
-  #   url: /storage
-  #   weight: 2
-  #   child:
-  #     - name: "Algorithm"
-  #       url: /blog/storage/algorithm
