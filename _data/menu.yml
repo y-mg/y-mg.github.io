@@ -5,20 +5,9 @@ main:
   - name: Android
     url: /android
     weight: 2
-    child:
-      - name: "Basic"
-        url: /blog/android/basic
-      - name: "Jetpack"
-        url: /blog/android/jetpack
-      - name: "Third Party"
-        url: /blog/android/third-party
+    #child:
+    #  - name: "Name"
+    #    url: /blog/android/basic
   - name: Kotlin
     url: /kotlin
     weight: 2
-    child:
-      - name: "Basic"
-        url: /blog/kotlin/basic
-      - name: "Coroutine"
-        url: /blog/kotlin/coroutine  
-      - name: "Reactive"
-        url: /blog/kotlin/reactive

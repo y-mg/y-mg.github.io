@@ -1,0 +1,43 @@
+---
+layout: post
+title: "View / Layout"
+date: 2018-01-22T00:00:00Z
+authors: ["y-mg"]
+categories: [Android]
+description: "안드로이드 UI 구성 요소"
+thumbnail: "/assets/images/android/banner/android.png"
+image: "/assets/images/android/banner/android.png"
+comments: false
+---
+
+## View 구조
+***
+안드이드의 뷰는 트리 구조로 최상위부터 최하위까지 `Top-Down` 방식으로 그려지며 뷰가 그려지는 순서는 <code style="color: #eb5657;">onMeasure()</code>, <code style="color: #eb5657;">onLayout()</code>, <code style="color: #eb5657;">onDraw()</code> 순으로 그려진다.
+<br/>
+
+<code style="color: #eb5657;">onMeasure()</code> 는 뷰의 크기를 정하고, <code style="color: #eb5657;">onLayout()</code> 은 뷰의 위치를 정하고,  <code style="color: #eb5657;">onDraw()</code> 는 최종적으로 뷰를 `Canvas` 로 그린다.
+<br/>
+<br/>
+<br/>
+
+
+
+## Layout
+***
+### LinearLayout
+수평(`Horizontal`) 혹은 수직(`Vertical`)의 방향성을 가지고 있는 레이아웃이며 뷰의 비율(<code style="color: #eb5657;">layout_weight</code>)을 조정할 수 있다.
+<br/>
+<br/>
+
+### RelativeLayout
+다른 뷰를 기준으로 상대적인 위치와 방향을 조정할 수 있는 레이아웃이다.
+<br/>
+<br/>
+
+### FrameLayout
+다른 뷰들과 겹쳐질 수 있도록 하는 레이아웃이다.
+<br/>
+<br/>
+
+### ConstraintLayout
+각 뷰들에 제약 조건을 적용해서 크기위 위치를 정할 수 있는 레이아웃으로 <code style="color: #eb5657;">LinearLayout</code> 에서만 가능했던 뷰의 비율을 조정할 수 있고 <code style="color: #eb5657;">RelativeLayout</code> 에서는 불가능했던 자식 뷰들간에 상호 관계를 정의할 수 있다.
