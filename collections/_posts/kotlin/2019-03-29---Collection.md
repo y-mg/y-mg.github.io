@@ -13,7 +13,6 @@ comments: false
 ## Collection / MutableCollection
 ***
 <code style="color: #eb5657;">kotlin.collection.Collection</code> 인터페이스이다.
-- <code style="color: #eb5657;">E</code> 는 `Collection` 의 요소이다.
 <br/>
 
 ```kotlin
@@ -31,7 +30,6 @@ interface MutableCollection<E> : Collection<E>, MutableIterable<E>
 ## List / MutableList
 ***
 <code style="color: #eb5657;">kotlin.collection.Collection</code> 인터페이스를 상속 받고 있다.
-- <code style="color: #eb5657;">E</code> 는 `Collection` 의 요소이다.
 <br/>
 
 ```kotlin
@@ -110,25 +108,29 @@ fun main() {
 
 
 
-## arrayOf / listOf
+## Array / List
 ***
-### arrayOf
-<code style="color: #eb5657;">Array</code> 인스턴스를 생성한다.
-- <code style="color: #eb5657;">array[index] = value</code> 형태로 요소를 변경할 수 있으나, 배열의 개수가 고정이기 때문에 추가 및 삭제가 불가능하다.
+### Array
+배열(`Array`)은 정적인 데이터 타입으로 선언하는 순간 크기가 정해지며 이후 크기를 수정할 수 없으며 배열의 값(value)에 인덱스(Index)를 이용해 접근하고 수정할 수 있다.
 <br/>
 
 ```kotlin
-val array = arrayOf(1, 2, 3)
+val arr1 = arrayOf<Int>(1, 2, 3, 4, 5)   // [1, 2, 3, 4, 5]
+val arr2 = arrayOfNulls<Int>(3)          // [null, null, null]
+val arr3 = Array<Int>(5) { 0 }           // [0, 0, 0, 0, 0]
 ```
 <br/>
 
-### listOf
-<code style="color: #eb5657;">java.util.List</code> 인스턴스를 생성한다.
-- 요소를 변경할 수 없으나, <code style="color: #eb5657;">.add()</code> 로 추가, <code style="color: #eb5657;">.remove()</code> 로 삭제할 수 있다.
+### List
+리스트(`List`)는 동적인 데이터 타입으로 순서를 가지지만 크기(size)가 정해지지 않아 크기에 관계없이 데이터 추가가 가능하다.
+<br/>
+
+기본적으로 `Immutable`(수정 불가) 타입이므로 데이터 수정을 위해서는 <code style="color: #eb5657;">MutableList</code> 선언이 필요하다.
 <br/>
 
 ```kotlin
-val list = listOf(1, 2, 3)
+val list1: List<Int> = List(3) { i -> i }     // [0, 1, 2]
+val list2 = mutableListOf<Int>(1, 2, 3, 4, 5) // [1, 2, 3, 4, 5]
 ```
 <br/>
 <br/>

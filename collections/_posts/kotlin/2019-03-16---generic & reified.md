@@ -29,7 +29,7 @@ interface List<E> : Collection<E> { /* ... */ }
 
 ## 제네릭 타입 소거
 ***
-제네릭은 타입 소거(`type` `erasure`)를 사용해 구현되는데, 런타임 시점에 제네릭의 인스턴스에는 타입 파라미터의 정보가 사라진다는 뜻이다.
+제네릭은 타입 소거(`type` `erasure`)를 사용해 구현되는데 런타임 시점에 제네릭의 인스턴스에는 타입 파라미터의 정보가 사라진다는 뜻이다.
 <br/>
 
 예를 들어 <code style="color: #eb5657;">List&lt;String&gt;</code> 객체를 만들고 그 안에 문자열을 넣어도 런타임시 이 객체를 오직 <code style="color: #eb5657;">List</code> 로 인식한다.
@@ -41,7 +41,7 @@ interface List<E> : Collection<E> { /* ... */ }
 
 ## 제네릭 동작 및 제약
 ***
-제네릭은 컴파일 타입에만 제약을 가하며, 런타임 시점에 바운드 타입(`bound` `type`, 특정 타입으로 제한한다는 의미)이 있는 경우에는 해당 바운드 타입으로 대체하고, 없는 경우에는 <code style="color: #eb5657;">Object</code> 로 대체한다.
+제네릭은 컴파일 타입에만 제약을 가하며 런타임 시점에 바운드 타입(`bound` `type`, 특정 타입으로 제한한다는 의미)이 있는 경우에는 해당 바운드 타입으로 대체하고 없는 경우에는 <code style="color: #eb5657;">Object</code> 로 대체한다.
 <br/>
 
 결국 제네릭은 런타임 시점에 타입 소거로 인해 타입 정보가 사라져서 런타임 시점에는 타입 파라미터를 검사할 수 없게 된다.
@@ -52,7 +52,7 @@ interface List<E> : Collection<E> { /* ... */ }
  val list2: List<Int> = listOf(1, 2)
  ```
  - 컴파일러는 위 리스트들을 다른 타입으로 인식하지만, 런타임 시점에는 같은 타입의 객체로 인식한다.
- - <code style="color: #eb5657;">List&lt;String&gt;</code> 에는 문자열만, <code style="color: #eb5657;">List&lt;Int&gt;</code> 정수만 들어있다고 가정할 수 있는 이유는 컴파일러가 올바른 타입만 각 리스트에 넣도록 보장해주기 때문이다. 
+ - <code style="color: #eb5657;">List&lt;String&gt;</code> 는 문자열, <code style="color: #eb5657;">List&lt;Int&gt;</code> 는 정수만 들어있다고 가정할 수 있는 이유는 컴파일러가 올바른 타입만 각 리스트에 넣도록 보장해주기 때문이다. 
 <br/>
 <br/>
 <br/>
@@ -61,7 +61,7 @@ interface List<E> : Collection<E> { /* ... */ }
 
 ## reified 키워드
 ***
-코틀린에서는 <span onClick="window.open('../2019-03-06--10. 인라인 함수');" style="cursor:pointer; color: #5495ff;">인라인 함수</span>의 특성을 이용하여 컴파일러는 타입 파라미터로 쓰인 구체적인 클래스를 참조하는 바이트 코드를 생성해 삽입하고, <code style="color: #eb5657;">reified</code> 를 사용한 타입 파라미터를 실체화할 수 있게 되어 기존 제네릭의 제약을 극복할 수 있게 된다.
+코틀린에서는 <span onClick="window.open('../2019-03-06--10. 인라인 함수');" style="cursor:pointer; color: #5495ff;">인라인 함수</span>의 특성을 이용하여 컴파일러는 타입 파라미터로 쓰인 구체적인 클래스를 참조하는 바이트 코드를 생성해 삽입하고 <code style="color: #eb5657;">reified</code> 를 사용한 타입 파라미터를 실체화할 수 있게 되어 기존 제네릭의 제약을 극복할 수 있게 된다.
 <br/>
 
 ```kotlin
