@@ -34,8 +34,8 @@ val observer: Observer<T> = object: Observer<T> {
 ```
 - <code style="color: #eb5657;">onSubscribe</code> 는 구독을 하면 호출이 되며, 파라미터의 <code style="color: #eb5657;">Disposable</code> 객체는 구독을 해제할 때 사용되며 <code style="color: #eb5657;">dispose()</code> 를 호출하면 된다.
 - <code style="color: #eb5657;">onNext</code> 는 데이터를 발행할 때 호출되며 데이터를 전달한다.
-- <code style="color: #eb5657;">onError</code> 는 에러가 발생하였을 경우에 호출되며, <code style="color: #eb5657;">onError</code>, <code style="color: #eb5657;">onComplete</code> 가 발생하지 않는다.
-- <code style="color: #eb5657;">onComplete</code> 는 데이터의 발행이 완료되었을 때 호출되며, 딱 한 번만 발생한다.
+- <code style="color: #eb5657;">onError</code> 는 에러가 발생하였을 경우에 호출되며 <code style="color: #eb5657;">onError</code>, <code style="color: #eb5657;">onComplete</code> 가 발생하지 않는다.
+- <code style="color: #eb5657;">onComplete</code> 는 데이터의 발행이 완료되었을 때 호출되며 딱 한 번만 발생한다.
 <br/>
 <br/>
 <br/>
@@ -44,7 +44,7 @@ val observer: Observer<T> = object: Observer<T> {
 
 ## Observable 구독
 ***
-구독은 발행한 데이터를 수신하여 무엇을 할 것인지 행동을 정의하는 것으로, <code style="color: #eb5657;">subscribe()</code> 로 구독을 신청할 수 있다.
+구독은 발행한 데이터를 수신하여 무엇을 할 것인지 행동을 정의하는 것으로 <code style="color: #eb5657;">subscribe()</code> 로 구독을 신청할 수 있다.
 <br/>
 
 ```kotlin
@@ -68,12 +68,12 @@ public final void subscribe(Observer<? super T> observer) {
     /* ... */
 }
 ```
-- 여러 메소드가 오버로딩 되어있는데 파라미터가 없는 <code style="color: #eb5657;">subscribe()</code> 는 주로 테스트 혹은 디버깅 용도로 사용되며, <code style="color: #eb5657;">onError</code> 가 호출되면 <code style="color: #eb5657;">onErrorNotImplementedException</code> 를 <code style="color: #eb5657;">throw</code> 하고 끝난다.
-- <code style="color: #eb5657;">Disposable</code> 객체는 구독을 해제할 때 사용되는데, <code style="color: #eb5657;">onComplete</code> 가 호출되면 <code style="color: #eb5657;">dispose()</code> 를 호출해 <code style="color: #eb5657;">Observable</code> 이 더 이상 데이터를 발행하지 않도록 구독을 해지해야 한다.
+- 여러 메소드가 오버로딩 되어있는데 파라미터가 없는 <code style="color: #eb5657;">subscribe()</code> 는 주로 테스트 혹은 디버깅 용도로 사용되며 <code style="color: #eb5657;">onError</code> 가 호출되면 <code style="color: #eb5657;">onErrorNotImplementedException</code> 를 <code style="color: #eb5657;">throw</code> 하고 끝난다.
+- <code style="color: #eb5657;">Disposable</code> 객체는 구독을 해제할 때 사용되는데 <code style="color: #eb5657;">onComplete</code> 가 호출되면 <code style="color: #eb5657;">dispose()</code> 를 호출해 <code style="color: #eb5657;">Observable</code> 이 더 이상 데이터를 발행하지 않도록 구독을 해지해야 한다.
 <br/>
 <br/>
 
-<code style="color: #eb5657;">Observable</code> 의 구독 방법은 사용자 필요 이벤트만 정의해서 등록하는 방법과, <code style="color: #eb5657;">Observable</code> 객체를 등록하는 방법 2가지가 있다.
+<code style="color: #eb5657;">Observable</code> 의 구독 방법은 사용자 필요 이벤트만 정의해서 등록하는 방법과 <code style="color: #eb5657;">Observable</code> 객체를 등록하는 방법 2가지가 있다.
 <br/>
 
 ```kotlin

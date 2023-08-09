@@ -90,12 +90,12 @@ fun main(): Unit = runBlocking {
 ## Coroutine Keyword
 ***
 ### CoroutineScope
-코루틴의 범위로, 코루틴 블록을 묶음으로 제어할 수 있는 단위를 말한다.
+코루틴의 범위로 코루틴 블록을 묶음으로 제어할 수 있는 단위를 말한다.
 <br/>
 <br/>
 
 ### GlobalScope
-`Top-Level` 의 `CoroutineScope` 로, `Application` 의 `Lifecycle` 에 종속적으로 존재한다.
+`Top-Level` 의 `CoroutineScope` 로 `Application` 의 `Lifecycle` 에 종속적으로 존재한다.
 <br/>
 <br/>
 
@@ -105,7 +105,7 @@ fun main(): Unit = runBlocking {
 <br/>
 
 ### Dispatcher
-`CoroutineContext` 의 주요 요소로, `CoroutineContext` 를 상속 받아 어떤 스레드를 어떻게 동작할 것인가에 대한 정의이다.
+`CoroutineContext` 의 주요 요소로 `CoroutineContext` 를 상속 받아 어떤 스레드를 어떻게 동작할 것인가에 대한 정의이다.
 - 코루틴을 만들고 `Dispatcher` 에 전송하면 `Dispatcher` 는 자신이 관리하는 스레드 풀 내의 스레드의 상황에 맞게 코루틴을 배분한다.
 - <code style="color: #eb5657;">Dispatchers.Main</code> 은 메인(`UI`) 스레드에서 동작하는 방식이다.
 - <code style="color: #eb5657;">Dispatchers.IO</code> 는 네트워크 / `DB` 등 작업에 사용하는 방식이다. (`Background` `Task`)

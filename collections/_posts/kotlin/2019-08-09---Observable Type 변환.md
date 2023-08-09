@@ -86,7 +86,7 @@ fun main() {
 
 ## Subject
 ***
-`Cold` `Observable` 를 `Hot` `Observable` 로 변환하는 클래스로, 데이터를 발행하는 <code style="color: #eb5657;">Observable</code> 이면서 <code style="color: #eb5657;">Observable</code> 를 구독하여 데이터를 소비하는 소비자 역할을 수행한다.
+`Cold` `Observable` 를 `Hot` `Observable` 로 변환하는 클래스로 데이터를 발행하는 <code style="color: #eb5657;">Observable</code> 이면서 <code style="color: #eb5657;">Observable</code> 를 구독하여 데이터를 소비하는 소비자 역할을 수행한다.
 <br/>
 <br/>
 
@@ -137,7 +137,7 @@ fun main() {
 <br/>
 
 ### BehaviorSubject
-등록 시점 이전에 배출된 직전의 값 하나를 전달받고 시작하는 `Subject` 로, 구독 시점에 데이터가 없으면 기본값을 전달한다.
+등록 시점 이전에 배출된 직전의 값 하나를 전달받고 시작하는 `Subject` 로 구독 시점에 데이터가 없으면 기본값을 전달한다.
 <br/>
 
 <div style="
@@ -174,7 +174,7 @@ fun main() {
 <br/>
 
 ### AsyncSubject
-<code style="color: #eb5657;">onComplete()</code> 가 호출된 이후 가장 최신 데이터인 <code style="color: #eb5657;">Observable</code> 의 마지막 값을 한 번만 배출하는 `Subject` 로, <code style="color: #eb5657;">Observable</code> 의 마지막 발행된 값을 저장하고 이후 구독 시 저장한 마지막 값을 발행한다.
+<code style="color: #eb5657;">onComplete()</code> 가 호출된 이후 가장 최신 데이터인 <code style="color: #eb5657;">Observable</code> 의 마지막 값을 한 번만 배출하는 `Subject` 로 <code style="color: #eb5657;">Observable</code> 의 마지막 발행된 값을 저장하고 이후 구독 시 저장한 마지막 값을 발행한다.
 <br/>
 
 <div style="
