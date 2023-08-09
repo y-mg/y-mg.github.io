@@ -63,7 +63,7 @@ comments: false
 
 ## ContentProvider
 ***
-애플리케이션 간에 데이터 공유를 위한 기능을 제공하는 컴포넌트로 <code style="color: #eb5657;">CalenderProvider</code>, <code style="color: #eb5657;">ContactsProvider</code> 등이 있다.
+애플리케이션 간에 데이터 공유를 위한 기능을 제공하는 컴포넌트로 연락처들의 정보를 가져올 수 있는 <code style="color: #eb5657;">ContactsProvider</code> 등이 있다.
 <br/>
 
-`Content` `Uri` 를 설정한 이후 <code style="color: #eb5657;">query()</code>, <code style="color: #eb5657;">insert()</code>, <code style="color: #eb5657;">update()</code>, <code style="color: #eb5657;">delete()</code> 를 구현한 뒤 <code style="color: #eb5657;">Intent</code> 를 교환하여 애플리케이션간에 데이터를 교환할 수 있다.
+`Content` `Uri` 를 설정한 이후 <code style="color: #eb5657;">query()</code>, <code style="color: #eb5657;">insert()</code>, <code style="color: #eb5657;">update()</code>, <code style="color: #eb5657;">delete()</code> 를 구현한 뒤 <code style="color: #eb5657;">Intent</code> 를 통해 애플리케이션간에 데이터를 교환할 수 있다.

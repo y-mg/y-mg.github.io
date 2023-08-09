@@ -12,10 +12,10 @@ comments: false
 
 ## View 구조
 ***
-안드이드의 뷰는 트리 구조로 최상위부터 최하위까지 `Top-Down` 방식으로 그려지며 뷰가 그려지는 순서는 <code style="color: #eb5657;">onMeasure()</code>, <code style="color: #eb5657;">onLayout()</code>, <code style="color: #eb5657;">onDraw()</code> 순으로 그려진다.
+안드로이드의 뷰는 트리 구조로 최상위부터 최하위까지 `Top-Down` 방식으로 그려지며 뷰가 그려지는 순서는 <code style="color: #eb5657;">onMeasure()</code>, <code style="color: #eb5657;">onLayout()</code>, <code style="color: #eb5657;">onDraw()</code> 순으로 그려진다.
 <br/>
 
-<code style="color: #eb5657;">onMeasure()</code> 는 뷰의 크기를 정하고, <code style="color: #eb5657;">onLayout()</code> 은 뷰의 위치를 정하고,  <code style="color: #eb5657;">onDraw()</code> 는 최종적으로 뷰를 `Canvas` 로 그린다.
+<code style="color: #eb5657;">onMeasure()</code> 는 뷰의 크기를 정하고, <code style="color: #eb5657;">onLayout()</code> 은 뷰의 위치를 정하고,  <code style="color: #eb5657;">onDraw()</code> 는 최종적으로 뷰를 <code style="color: #eb5657;">Canvas</code> 를 사용해 그린다.
 <br/>
 <br/>
 <br/>

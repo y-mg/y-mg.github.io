@@ -6,7 +6,7 @@ authors: ["y-mg"]
 categories: [Android, Architecture]
 description: "Feature 단위로 레이어를 만들고 관심사를 분리하여 변화에 유연하도록 해주는 아키텍쳐"
 thumbnail: "/assets/images/android/banner/architecture.png"
-image: "/assets/images/android/banner/arcitecture.png"
+image: "/assets/images/android/banner/architecture.png"
 comments: false
 ---
 
@@ -18,7 +18,7 @@ comments: false
 클린 아키텍쳐가 제대로 동작하기 위해서는 의존정 규칙을 지키는 것이 가장 중요하며 반드시 외부에서 내부로, 저수준에서 고수준 정책으로 향해야 한다.
 <br/>
 
-예를 들어 안드로이드에서 비즈니스 로직을 담당하는 `ViewModel` 은 로컬 `DB` 혹은 서버와의 통신 같은 세부적인 사항에 의존적이지 않도록 해야하며, 이를 통해 비즈니스 로직(고수준 정책)은 세부적인 사항(저수준 정책)의 변경에 영향을 받지 않게 된다.
+예를 들어 안드로이드에서 비즈니스 로직을 담당하는 `ViewModel` 은 로컬 `DB` 혹은 서버와의 통신 같은 세부적인 사항에 의존적이지 않도록 해야한다.
 <br/>
 
 <div style="
@@ -40,10 +40,10 @@ background-position: center center;
 안드로이드 클린 아키텍처의 목적은 관심사의 분리이다.
 <br/>
 
-안드로이드에서 클릭 아키텍처는 `Data`, `Domain`, `Presentation(UI)` 레이어로 구성되며 각 레이어마다 역할과 책임을 명확히 가지고 있으며, 각 레이어의 모듈들은 단방향의 참조를 한다.
+안드로이드에서 클릭 아키텍처는 `Data`, `Domain`, `Presentation(UI)` 레이어로 구성되며 각 레이어마다 역할과 책임을 명확히 가지고 있으며 각 레이어의 모듈들은 단방향의 참조를 한다.
 <br/>
 
-실제 개발 환경에서는 각 레이어를 모듈(`module`) 로 만드는게 일반적인데, 하나의 모듈에서 모든 개발을 진행하게 되면 액티비티에서 `DB` 의 인스턴스에 접근하는 등과 같이 사실상 모든 코드에 접근 가능하기 때문에 의존성 규칙을 위반할 수 있는 실수가 발생할 수 있기 때문이다.
+실제 개발 환경에서는 각 레이어를 모듈(`module`) 로 만드는게 일반적인데 하나의 모듈에서 모든 개발을 진행하게 되면 액티비티에서 `DB` 의 인스턴스에 접근하는 등과 같이 사실상 모든 코드에 접근 가능하기 때문에 의존성 규칙을 위반할 수 있는 실수가 발생할 수 있기 때문이다.
 <br/>
 
 <div style="
@@ -72,7 +72,7 @@ background-position: center center;
 
 ## Clean Architecture 에서 각 Layer 동작
 ***
-"`A` 는 상품을 구매하기 위해 앱을 실행시키고 필요한 상품을 클릭했다." 라고 하는 단순한 동작 하나라도 앱 내에서는 각 레이어들의 단방향 데이터 흐름(`UpStream` + `DownStream`)으로 통신이 시작된다.
+"`A` 는 상품을 구매하기 위해 앱을 실행시키고 필요한 상품을 클릭했다" 라고 하는 단순한 동작 하나라도 앱 내에서는 각 레이어들의 단방향 데이터 흐름(`UpStream` + `DownStream`)으로 통신이 시작된다.
 <br/>
 
 단방향 데이터 흐름은 말 그대로 데이터가 한 방향으로 흐르는 것을 의미하는데 `UpStream` 방식과 `DownStream` 방식이 있다.
@@ -166,7 +166,7 @@ class MainViewModel @Inject constructor(
 `Domain` 레이어는 필수가 아닌 선택적인(`Optional`) 부분이지만, 앱의 규모가 커질수록 `Domain` 레이어의 필요성이 늘어난다.
 <br/>
 
-`Domain` 레이어는 `UseCase` 모듈을 가지고 있는데, 보통 "동사(동작) + 명사/대상(`Optional`) + UseCase" 형태로 네이밍을 정의하고, 클래스 이름을 그대로 사용하면서 <code style="color: #eb5657;">invoke()</code> 함수를 호출할 수 있게 해주는 <code style="color: #eb5657;">operator fun invoke()</code> 형태로 정의한다.
+`Domain` 레이어는 `UseCase` 모듈을 가지고 있는데 보통 "동사(동작) + 명사/대상(`Optional`) + UseCase" 형태로 네이밍을 정의하고 클래스 이름을 그대로 사용하면서 <code style="color: #eb5657;">invoke()</code> 함수를 호출할 수 있게 해주는 <code style="color: #eb5657;">operator fun invoke()</code> 형태로 정의한다.
 <br/>
 
 `Domain` 레이어에서 `UseCase` 모듈을 사옹하는 이유는 `ViewModel` 의 3가지 책임 이외에 관련되지 않은 부분, 예를 들어 `ViewModel` 책임 이외의 비즈니스 로직 혹은 여러 `ViewModel` 에서 사용되는 중복 코드 등을 `UseCase` 패턴으로 분리하여 더욱 깔끔한 코드를 작성하는 것이 목적이다.
@@ -222,10 +222,10 @@ class MainViewModel @Inject constructor(
 서버 혹은 로컬 `DB` 와 통신하여 데이터를 가져오는 역할을 하는 레이어로 `Domain` 레이어에 대한 의존성을 가지고 있다.
 <br/>
 
-`Domain` 레이어의 `Repository` 인터페이스에 대한 구현체를 포함하고 있는데, `Presentation` 레이어는 `Data` 레이어에 직접 접근하여 데이터를 가져올 수 없기 때문에 `Domain` 레이어의 `Repository` 를 통해 데이터를 가져와야 하기 때문이다.
+`Domain` 레이어의 `Repository` 인터페이스에 대한 구현체를 포함하고 있는데 `Presentation` 레이어는 `Data` 레이어에 직접 접근하여 데이터를 가져올 수 없기 때문에 `Domain` 레이어의 `Repository` 를 통해 데이터를 가져와야 하기 때문이다.
 <br/>
 
-`Data` 레이어의 데이터를 `Domain` 레이어의 데이터로 변환해주는 `Mapper` 를 가지고 있는 있는 이유는, 만약 `Repository` 가 `DataSource` 의 데이터를 그대로 전달 받아 별다른 처리 없이 그대로 반환하여 이를 `Presentation` 레이어에서 사용하는 경우 서버 단의 이슈가 `Presentation` 에 영향을 끼칠 수 있다.
+`Data` 레이어의 데이터를 `Domain` 레이어의 데이터로 변환해주는 `Mapper` 를 가지고 있는 있는 이유는 `Repository` 가 `DataSource` 의 데이터를 그대로 전달 받아 별다른 처리 없이 그대로 반환하여 이를 `Presentation` 레이어에서 사용하는 경우 서버 단의 이슈가 `Presentation` 에 영향을 끼칠 수 있다.
 <br/>
 
 필드 삭제, 필드 이름 변경 등 서버가 데이터 구조를 변경하면 이를 참조하고 있는 다른 레이어들에서도 변경이 발생할 수 밖에 없다.
