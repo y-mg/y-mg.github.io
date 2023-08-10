@@ -12,7 +12,7 @@ comments: false
 
 ## Observable
 ***
-소비할 데이터를 발행하는 역할을 하는 구독 대상자로, <code style="color: #eb5657;">Observable</code> 이 데이터를 발행하고 이벤트를 보내면 소비자는 소비자는 <code style="color: #eb5657;">Observable</code> 에 구독(`Subscribe`)해 데이터를 소비(`Consume`)한다.
+소비할 데이터를 발행하는 역할을 하는 구독 대상자로 <code style="color: #eb5657;">Observable</code> 이 데이터를 발행하고 이벤트를 보내면 소비자는 소비자는 <code style="color: #eb5657;">Observable</code> 에 구독(`Subscribe`)해 데이터를 소비(`Consume`)한다.
 <br/>
 <br/>
 <br/>

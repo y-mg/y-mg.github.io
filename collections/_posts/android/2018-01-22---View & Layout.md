@@ -40,4 +40,4 @@ comments: false
 <br/>
 
 ### ConstraintLayout
-각 뷰들에 제약 조건을 적용해서 크기위 위치를 정할 수 있는 레이아웃으로 <code style="color: #eb5657;">LinearLayout</code> 에서만 가능했던 뷰의 비율을 조정할 수 있고 <code style="color: #eb5657;">RelativeLayout</code> 에서는 불가능했던 자식 뷰들간에 상호 관계를 정의할 수 있다.
+각 뷰들에 제약 조건을 적용해서 크기와 위치를 정할 수 있는 레이아웃으로 <code style="color: #eb5657;">LinearLayout</code> 에서만 가능했던 뷰의 비율을 조정할 수 있고 <code style="color: #eb5657;">RelativeLayout</code> 에서는 불가능했던 자식 뷰들간에 상호 관계를 정의할 수 있다.

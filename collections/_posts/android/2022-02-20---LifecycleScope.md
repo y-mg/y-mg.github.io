@@ -25,7 +25,7 @@ lifecycleScope.launch {
 액티비티 혹은 프래그먼트에서 일반적인 코루틴을 만들어 사용을 하는 경우 <code style="color: #eb5657;">LifecycleOwner</code> 가 `Destroyed` 될 때 실행 중인 코루틴을 취소하기 위해서는 <code style="color: #eb5657;">CoroutineContext.cancel()</code> 을 호출해야 한다.
 <br/>
 
-하지만 <code style="color: #eb5657;">LifecycleScope</code> 에서 실행되는 코루틴은 생명주기에 맞춰 안전하게 종료하며 액티비티나 프래그먼트의 생명주기 이벤트를 받아서 파괴되었다고 판단되면 하위 코루틴의 작업들을 모두 취소한다.
+하지만 <code style="color: #eb5657;">LifecycleScope</code> 에서 실행되는 코루틴은 생명주기에 맞춰 안전하게 종료하며 하위 코루틴의 작업들을 모두 취소한다.
 <br/>
 
 ```kotlin
@@ -89,7 +89,7 @@ class MainViewModel: ViewModel() {
 생명주기의 상태에 맞춰 코루틴을 실행, 중단, 재개하고 싶은 경우 <code style="color: #eb5657;">launchWhenCreated</code>, <code style="color: #eb5657;">launchWhenStarted</code>, <code style="color: #eb5657;">launchWhenResumed</code> 함수를 사용하면 된다.
 <br/>
 
-`when` 이후 접미어에 해당하는 생명주기에 맞춰 실행이 되고, 생명주기의 상태가 맞지 않는다면 정지가 되고, 다시 생명주기 상태가 충족되면 재개한다.
+`When` 이후 접미어에 해당하는 생명주기에 맞춰 실행이 되고, 생명주기의 상태가 맞지 않는다면 정지가 되고, 다시 생명주기 상태가 충족되면 재개한다.
 <br/>
 
 ```kotlin
@@ -110,10 +110,10 @@ lifecycleScope.launchWhenStarted {
 <code style="color: #eb5657;">Flow</code> 를 <code style="color: #eb5657;">launchWhen···()</code> 내에서 사용하게 되면 <code style="color: #eb5657;">onDestroy()</code> 에서 <code style="color: #eb5657;">collect</code> 가 중단되기 때문에 백그라운드 상태로 들어가게되면 생명주기의 상태가 <code style="color: #eb5657;">onStop()</code> 이 되기 때문에 <code style="color: #eb5657;">collect</code> 가 중단되지 않는다.
 <br/>
 
-하지만 <code style="color: #eb5657;">repeatOnLifeCycle</code> 을 사용하면 포그라운드 상태일 때만 한정지어 특정 생명주기가 트리거 되었을 때 코루틴 <code style="color: #eb5657;">Job</code> 을 생성합니다. 
+하지만 <code style="color: #eb5657;">repeatOnLifeCycle</code> 을 사용하면 포그라운드 상태일 때만 한정지어 특정 생명주기가 트리거 되었을 때 코루틴 <code style="color: #eb5657;">Job</code> 을 생성한다. 
 <br/>
 
-백그라운드 상태로 들어가게되면 <code style="color: #eb5657;">onStop()</code> 에서 <code style="color: #eb5657;">Job</code> 이 취소되고 다시 생명주기 상태가 충족되면 처음부터 다시 작업을 시작하기 때문에 백그라운드 상태에서 <code style="color: #eb5657;">collect</code> 를 중단할 수 있다.
+백그라운드 상태로 들어가게되면 <code style="color: #eb5657;">onStop()</code> 에서 <code style="color: #eb5657;">Job</code> 이 취소되고, 다시 생명주기 상태가 충족되면 처음부터 다시 작업을 시작하기 때문에 백그라운드 상태에서 <code style="color: #eb5657;">collect</code> 를 중단할 수 있게 된다.
 <br/>
 
 ```kotlin

@@ -50,7 +50,7 @@ background-position: center center;
 ```kotlin
 fun main(){
     println("Coroutine")
-    Thread.sleep(3000L) // 3초 동안 처리가 중지되며, 이 시간은 동안 처리는 진행되지 않음
+    Thread.sleep(3000L) // 3초 동안 처리가 중지되며 이 시간은 동안 처리는 진행되지 않음
     println("Hello")
 }
 
@@ -62,7 +62,7 @@ fun main(){
 <br/>
 <br/>
 
-코루틴이 일시 중단(suspend)이 되면 해당 스레드를 해제하고, 해제하는 동안 다른 처리에 리소스를 활용할 수 있다.
+코루틴이 일시 중단(suspend)이 되면 해당 스레드를 해제하고 해제하는 동안 다른 처리에 리소스를 활용할 수 있다.
 <br/>
 
 ```kotlin
@@ -70,7 +70,7 @@ import kotlinx.coroutines.*
 
 fun main(): Unit = runBlocking {
     launch {
-        delay(3000L) // 3초간 처리를 중단되며, 스레드가 해제되기 때문에 먼저 Hello 가 출력
+        delay(3000L) // 3초간 처리를 중단되며 스레드가 해제되기 때문에 먼저 Hello 가 출력
         println("Coroutine")
     }
     println("Hello")

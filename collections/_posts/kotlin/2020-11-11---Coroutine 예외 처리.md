@@ -14,7 +14,7 @@ comments: false
 ***
 코루틴은 내부적으로 취소 동작을 위해 <code style="color: #eb5657;">CancellationException</code> 을 사용한다.
 - 모든 <code style="color: #eb5657;">Handler</code> 가 무시하여 <code style="color: #eb5657;">Handler</code> 등록하여도 동작하지 않는다.
-- <code style="color: #eb5657;">try-catch</code> 를 통해 처리할 경우 취소(<code style="color: #eb5657;">catch</code>) 및 종료시에 자원 반납이 대한 이중 코드가 되기에 <code style="color: #eb5657;">try-finally</code> 에서 한번에 처리해야 한다.
+- <code style="color: #eb5657;">try-catch</code> 를 통해 처리할 경우 취소 및 종료시에 자원 반납이 대한 이중 코드가 되기에 <code style="color: #eb5657;">try-finally</code> 에서 한번에 처리해야 한다.
 <br/>
 
 ```kotlin
@@ -174,7 +174,7 @@ fun main() = runBlocking {
 
 ## supervisorScope
 ***
-<code style="color: #eb5657;">coroutineScope</code> 과 다르게 예외를 단방향 처리(부모 → 자식)하는 <code style="color: #eb5657;">CoroutineScope</code> 이다.
+<code style="color: #eb5657;">coroutineScope</code> 와는 다르게 예외를 단방향 처리(부모 → 자식)하는 <code style="color: #eb5657;">CoroutineScope</code> 이다.
 <br/>
 
 블록 내부의 모든 코루틴에 <code style="color: #eb5657;">SupervisorJob</code> 을 설정하고 싶을 경우에 주로 사용한다.
