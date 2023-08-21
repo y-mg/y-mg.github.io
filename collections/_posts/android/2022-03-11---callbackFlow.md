@@ -15,7 +15,7 @@ comments: false
 `Callback` 을 <code style="color: #eb5657;">Flow</code> 로 변경하는 `Flow` `Builder` 이다.
 <br/>
 
-<code style="color: #eb5657;">Flow</code> 와 `Listener` 내부의 스코프가 다르기 때문에 `Listener` 내부에서 <code style="color: #eb5657;">emit()</code> 을 사용하여 데이터를 보낼 수 없는데 <code style="color: #eb5657;">callbackFlow</code> 를 사용하면 `Listener` 내부의 값을 <code style="color: #eb5657;">Flow</code> 로 보낼 수 있다.
+<code style="color: #eb5657;">Flow</code> 와 `Listener` 내부의 스코프가 다르기 때문에 `Listener` 내부에서 <code style="color: #eb5657;">emit()</code> 을 사용하여 데이터를 보낼 수 없는데, <code style="color: #eb5657;">callbackFlow</code> 를 사용하면 `Listener` 내부의 값을 <code style="color: #eb5657;">Flow</code> 로 보낼 수 있다.
 <br/>
 
 ```kotlin
