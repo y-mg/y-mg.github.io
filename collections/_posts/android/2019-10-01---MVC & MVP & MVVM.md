@@ -71,16 +71,16 @@ background-position: center center;
 `MVP` 디자인 패턴의 `Presenter` 는 `View` 를 참조할 수 있지만, `MVVM` 디자인 패턴의 `ViewModel` 은 `View` 에 대한 참조가 불가능하다.
 <br/>
 
-`ViewModel` 은 `View` 가 필요로 하는 데이터를 `Model` 에서 가져와 <code style="color: #eb5657;">Observable</code> 타입으로 관리하여 `View` 들이 `ViewModel` 의 데이터를 구독하여 화면을 갱신할 수 있도록 한다.
+`ViewModel` 을 사용하면 화면 회전과 같이 액티비티가 재성성이 되는 경우에 소멸되지 않고, 액티비티 내에서 <code style="color: #eb5657;">finish()</code> 가 호출되는 경우에 <code style="color: #eb5657;">onCleared()</code> 가 호출되며 소멸된다.
 <br/>
 
-화면 회전과 같이 액티비티가 재성생이 되는 경우 액티비티는 종료되고 다시 생성하는 과정을 거치면서 데이터가 유지되지 않게 된다.
+액티비티 재성성시 데이터를 유지하기 위해서는 <code style="color: #eb5657;">onSaveInstanceState()</code> 에서 번들(<code style="color: #eb5657;">Bundle</code>)에 데이터를 저장하고, <code style="color: #eb5657;">onCreate()</code> 또는 <code style="color: #eb5657;">onRestoreInstanceState()</code> 에서 저장한 데이터를 전달 받을 수 있으나 번들은 저장하는 데이터의 자료형과 크기에 제한이 있다는 단점이 있기 때문에 `ViewModel` 에서 데이터를 관리하는 것이 권장된다.
 <br/>
 
-액티비티 재성성시 데이터를 유지하기 위해서는 <code style="color: #eb5657;">onSaveInstanceState()</code> 에서 번들(<code style="color: #eb5657;">Bundle</code>)에 데이터를 저장하고, <code style="color: #eb5657;">onCreate()</code> 또는 <code style="color: #eb5657;">onRestoreInstanceState()</code> 에서 저장한 데이터를 전달 받을 수 있으나 번들은 저장하는 데이터의 자료형과 크기에 제한이 있다는 단점이 있다.
+즉, `ViewModel` 은 액티비티나 프래그먼트와 별개로 존재하며, 화면 회전 및 다른 구성 변경으로 인한 앱의 재시작에 영향을 받지 않아 데이터 손실을 방지할 수 있다.
 <br/>
 
-`ViewModel` 을 사용하면 액티비티가 재성성이 되는 경우에 소멸되지 않고 액티비티 내에서 <code style="color: #eb5657;">finish()</code> 가 호출되는 경우에 <code style="color: #eb5657;">onCleared()</code> 가 호출되며 소멸된다.
+또한 `ViewModel` 은 비즈니스 로직과 UI 로직을 분리시켜 코드 유지보수성이 향상되고, 여러 컴포넌트 간 데이터 공유가 용이해진다.
 <br/>
 
 <div style="
