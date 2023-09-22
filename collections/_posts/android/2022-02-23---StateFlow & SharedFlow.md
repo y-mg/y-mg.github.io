@@ -24,7 +24,10 @@ comments: false
 따라서 <code style="color: #eb5657;">StaeFlow</code> 를 사용하게 되면 단순히 <code style="color: #eb5657;">StaeFlow</code> 를 구독해 데이터가 들어오면 소비하면 된다.
 <br/>
 
- <code style="color: #eb5657;">StaeFlow</code> 는 `Hot` `Stream` 으로 <code style="color: #eb5657;">collect</code> 시점 이후부터 발행된 데이터를 소비할 수 있으며, 내부적으로 <code style="color: #eb5657;">distinctUntilChanged()</code> 기능이 있어서 중복된 데이터가 발행되는 경우에는 데이터를 받지 않게 되며, 초기값 설정이 필수이고 데이터 바인딩을 지원한다.
+<code style="color: #eb5657;">StaeFlow</code> 는 <code style="color: #eb5657;">SharedFlow</code> 의 상속을 받는 `Hot` `Stream` 으로 <code style="color: #eb5657;">collect</code> 시점 이후부터 발행된 데이터를 소비할 수 있으며, 내부적으로 <code style="color: #eb5657;">distinctUntilChanged()</code> 기능이 있어서 중복된 데이터가 발행되는 경우에는 데이터를 받지 않게 되며, 초기값 설정이 필수이고 데이터 바인딩을 지원한다.
+<br/>
+
+<code style="color: #eb5657;">StaeFlow</code> 는 단일 데이터의 상태 변화를 관리하고 전달하데 사용되며, 주로 UI 상태에 앱의 상태를 관리할 떄 사용된다.
 <br/>
 <br/>
 
@@ -56,6 +59,8 @@ public fun <T> Flow<T>.stateIn(
 ## SharedFlow
 ***
 <code style="color: #eb5657;">SharedFlow</code> 는 <code style="color: #eb5657;">StateFlow</code> 보다 상세한 설정이 가능한 데이터 스트림으로, <code style="color: #eb5657;">collect</code> 시점 이후부터 발행된 데이터를 소비할 수 있고, 초기값 설정을 하지 않아도 되며 데이터 바인딩을 지원하지 않는다.
+
+<code style="color: #eb5657;">SharedFlow</code> 는 데이터를 다수의 구독자 간에 공유하면서 각자의 속도로 데이터를 처리할 수 있도록 유연한 데이터 처리를 지원한다.
 <br/>
 <br/>
 
