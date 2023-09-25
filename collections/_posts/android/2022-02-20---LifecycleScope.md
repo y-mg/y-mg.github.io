@@ -67,7 +67,7 @@ internal class LifecycleCoroutineScopeImpl(
 
 ## ViewModelScope
 ***
-안드로이드 생명주기를 인식하는 코루틴 스코프로,, `ViewModel` 에서 <code style="color: #eb5657;">onCleared()</code> 호출 시 모든 코루틴이 취소된다.
+안드로이드 생명주기를 인식하는 코루틴 스코프로, `ViewModel` 에서 <code style="color: #eb5657;">onCleared()</code> 호출 시 모든 코루틴이 취소된다.
 <br>
 
 ```kotlin

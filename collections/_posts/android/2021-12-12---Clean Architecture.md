@@ -225,7 +225,7 @@ class MainViewModel @Inject constructor(
 
 ## Domain Layer
 ***
-비즈니스 로직을 처리하는 핵심 부분으로 비즈니스 로직에서 필요한 데이터 모델과 비즈니스 로직을 실행하는 기능 단위의 `UseCase` 를 가지고 있으며, 다른 레이어에 대한 의존성을 가지지 않고 독립적으로 분리되어 있는 레이어이다.
+비즈니스 로직을 처리하는 핵심 부분으로, 비즈니스 로직에서 필요한 데이터 모델과 비즈니스 로직을 실행하는 기능 단위의 `UseCase` 를 가지고 있으며, 다른 레이어에 대한 의존성을 가지지 않고 독립적으로 분리되어 있는 레이어이다.
 <br/>
 
 보통 외부 서비스에 대한 의존성이 없는 순수한 자바 또는 코틀린 클래스로 이루어지는데, 테스트 용이성, 재사용성, 유지 보수 용이성 등을 향상 시킬 수 있기 떄문이다.
@@ -238,7 +238,7 @@ class MainViewModel @Inject constructor(
 `Domain` 레이어는 비즈니스 로직을 실행하는 `UseCase` 모듈을 가지고 있는데 보통 "동사(동작) + 명사/대상(`Optional`) + UseCase" 형태로 네이밍을 정의하며, 클래스 이름을 그대로 사용하면서 함수를 호출할 수 있게 해주는 <code style="color: #eb5657;">operator fun invoke()</code> 형태로 정의한다.
 <br/>
 
-`Domain` 레이어에서 `UseCase` 모듈을 사옹하는 이유는 `ViewModel` 의 3가지 책임 이외에 관련되지 않은 부분, 예를 들어, `ViewModel` 의 책임 이외의 비즈니스 로직 혹은 여러 `ViewModel` 에서 사용되는 중복 코드 등을 `UseCase` 패턴으로 분리해서 더욱 깔끔한 코드를 작성하는 것이 목적이다.
+`Domain` 레이어에서 `UseCase` 모듈을 사옹하는 이유는 `ViewModel` 의 3가지 책임 이외에 관련되지 않은 부분, 예를 들어, `ViewModel` 의 책임 이외의 비즈니스 로직 혹은 여러 `ViewModel` 에서 사용되는 중복 코드 등을 `UseCase` 패턴으로 분리해서 원활한 코드 관리를 하는 것이 목적이다.
 <br/>
 
 `Repository` 인터페이스는 `Data` 레이어의 `DataSource` 를 추상화하고 `Domain` 레이어와 `DataSource` 간의 의존성을 분리하는데 사용된다.

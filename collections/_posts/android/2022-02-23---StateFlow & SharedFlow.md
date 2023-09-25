@@ -24,10 +24,10 @@ comments: false
 따라서 <code style="color: #eb5657;">StaeFlow</code> 를 사용하게 되면 단순히 <code style="color: #eb5657;">StaeFlow</code> 를 구독해 데이터가 들어오면 소비하면 된다.
 <br/>
 
-<code style="color: #eb5657;">StaeFlow</code> 는 <code style="color: #eb5657;">SharedFlow</code> 의 상속을 받는 `Hot` `Stream` 으로 <code style="color: #eb5657;">collect</code> 시점 이후부터 발행된 데이터를 소비할 수 있으며, 내부적으로 <code style="color: #eb5657;">distinctUntilChanged()</code> 기능이 있어서 중복된 데이터가 발행되는 경우에는 데이터를 받지 않게 되며, 초기값 설정이 필수이고 데이터 바인딩을 지원한다.
+<code style="color: #eb5657;">StaeFlow</code> 는 <code style="color: #eb5657;">SharedFlow</code> 의 상속을 받는 `Hot` `Stream` 으로, <code style="color: #eb5657;">collect</code> 시점 이후부터 발행된 데이터를 소비할 수 있으며, 내부적으로 <code style="color: #eb5657;">distinctUntilChanged()</code> 기능이 있어서 중복된 데이터가 발행되는 경우에는 데이터를 받지 않게 되며, 초기값 설정이 필수이고 데이터 바인딩을 지원한다.
 <br/>
 
-<code style="color: #eb5657;">StaeFlow</code> 는 단일 데이터의 상태 변화를 관리하고 전달하데 사용되며, 주로 UI 상태에 앱의 상태를 관리할 떄 사용된다.
+<code style="color: #eb5657;">StaeFlow</code> 는 단일 데이터의 상태 변화를 관리하고 전달하데 사용되며, 주로 UI 상태, 앱의 상태를 관리할 떄 사용된다.
 <br/>
 <br/>
 
