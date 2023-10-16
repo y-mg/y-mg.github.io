@@ -12,7 +12,7 @@ comments: false
 
 ## Android Component
 ***
-안드로이드는 <code style="color: #eb5657;">Activity</code>, <code style="color: #eb5657;">Service</code>, <code style="color: #eb5657;">BroadcastReceiver</code>, <code style="color: #eb5657;">ContentProvider</code> 4개의 컴포넌트로 구성되며m 각 컴포넌트는 하나의 독립된 형태로 존재하며 정해진 역할을 수행한다.
+안드로이드는 <code style="color: #eb5657;">Activity</code>, <code style="color: #eb5657;">Service</code>, <code style="color: #eb5657;">BroadcastReceiver</code>, <code style="color: #eb5657;">ContentProvider</code> 4개의 컴포넌트로 구성되며, 각 컴포넌트는 하나의 독립된 형태로 존재하며 정해진 역할을 수행한다.
 <br/>
 
 각 컴포넌트 간에는 인텐트(<code style="color: #eb5657;">Intent</code>)라는 일종의 메시지 객체를 사용하여 상호 통신을 한다.
