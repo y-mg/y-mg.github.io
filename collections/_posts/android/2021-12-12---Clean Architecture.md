@@ -103,12 +103,21 @@ background-position: center center;
 
 
 
-## 안드로이드 Clean Architecture
+## Recommended Architecture
 ***
-안드로이드 클린 아키텍처의 목적은 관심사의 분리이다.
+`Recommended` 아키텍처는 `Google` 에서 공식적으로 권장하는 안드로이드 앱 개발 방법론이다.
 <br/>
 
-안드로이드에서 클릭 아키텍처는 `Data`, `Domain`, `UI` 레이어로 구성되며, 각 레이어마다 역할과 책임을 명확히 가지고 있으며, 각 레이어의 모듈들은 단방향의 참조를 한다.
+`MVVM` 패턴을 기반으로 하며, 데이터와 `UI` 의 분리를 강조하여, `UI` 구성 요소와 비즈니스 로직을 분리해 개발을 용이하게 하는데 목적이 있다.
+<br/>
+
+`Data`, `Domain`, `UI` 레이어로 구성되며, 각 레이어마다 역할과 책임을 명확히 가지고 있으며, 각 레이어의 모듈들은 단방향의 참조를 한다.
+<br/>
+
+클린 아키텍처와 비슷하게 구성될 수 있지만, `Domain` 레이어의 필수 여부에 차이가 있다. 
+<br/>
+
+클린 아키텍처에서는 `Domain` 레이어가 반드시 존재해야 하며, 비즈니스 로직과 `UseCase` 를 처리해야 하지만, `Recommended` 아키텍처에서는 `Domain` 레이어가 선택 사항으로 취급된다.
 <br/>
 
 <div style="
@@ -135,7 +144,7 @@ background-position: center center;
 
 
 
-## Clean Architecture 에서 각 Layer 동작
+## Layer 의 데이터 흐름
 ***
 "`A` 는 상품을 구매하기 위해 앱을 실행시키고 필요한 상품을 클릭했다" 라고 하는 단순한 동작 하나라도 앱 내에서는 각 레이어들의 단방향 데이터 흐름(`UpStream` + `DownStream`)으로 통신이 시작된다.
 <br/>
@@ -238,7 +247,7 @@ class MainViewModel @Inject constructor(
 `Domain` 레이어는 비즈니스 로직을 실행하는 `UseCase` 모듈을 가지고 있는데 보통 "동사(동작) + 명사/대상(`Optional`) + UseCase" 형태로 네이밍을 정의하며, 클래스 이름을 그대로 사용하면서 함수를 호출할 수 있게 해주는 <code style="color: #eb5657;">operator fun invoke()</code> 형태로 정의한다.
 <br/>
 
-`Domain` 레이어에서 `UseCase` 모듈을 사옹하는 이유는 `ViewModel` 의 3가지 책임 이외에 관련되지 않은 부분, 예를 들어, `ViewModel` 의 책임 이외의 비즈니스 로직 혹은 여러 `ViewModel` 에서 사용되는 중복 코드 등을 `UseCase` 패턴으로 분리해서 원활한 코드 관리를 하는 것이 목적이다.
+`Domain` 레이어에서 `UseCase` 모듈을 사옹하는 이유는 비즈니스 로직 혹은 여러 `ViewModel` 에서 사용되는 중복 코드 등을 `UseCase` 패턴으로 분리해서 원활한 코드 관리를 하는 것이 목적이다.
 <br/>
 
 `Repository` 인터페이스는 `Data` 레이어의 `DataSource` 를 추상화하고 `Domain` 레이어와 `DataSource` 간의 의존성을 분리하는데 사용된다.
@@ -297,13 +306,7 @@ class MainViewModel @Inject constructor(
 서버 혹은 로컬 `DB` 와 통신하여 데이터를 가져오는 역할을 하는 레이어로, `Domain` 레이어에 대한 의존성을 가지고 있으며, 데이터의 `CRUD`(`Create`, `Read`, `Update`, `Delete`) 작업을 처리한다.
 <br/>
 
-`Domain` 레이어의 `Repository` 인터페이스에 대한 구현체를 포함하고 있는데, `UI` 레이어는 `Data` 레이어에 직접 접근해서 데이터를 가져올 수 없기 때문에 `Domain` 레이어의 `Repository` 를 통해 데이터를 가져와야 하기 때문이다.
-<br/>
-
-`Data` 레이어의 데이터를 `Domain` 레이어의 데이터로 변환해주는 `Mapper` 를 가지고 있는 있는 이유는 `Repository` 가 `DataSource` 의 데이터를 그대로 전달 받아 별다른 처리 없이 그대로 반환하여 이를 `UI` 레이어에서 사용하는 경우 서버 단의 이슈가 `UI` 에 영향을 끼칠 수 있다.
-<br/>
-
-필드 삭제, 필드 이름 변경 등 서버가 데이터 구조를 변경하면 이를 참조하고 있는 다른 레이어들에서도 변경이 발생할 수 밖에 없다.
+`Data` 레이어의 데이터를 `Domain` 레이어의 데이터로 변환해주는 `Mapper` 를 가지고 있는데, `Repository` 가 `DataSource` 의 데이터를 그대로 전달 받아 별다른 처리 없이 그대로 반환하여 이를 `UI` 레이어에서 사용하는 경우 서버 단의 이슈가 `UI` 에 영향을 끼칠 수 있기 때문이다.
 <br/>
 
 예를 들어, 데이터의 정보를 `UI` 에 보여주기 위해 서버에 각각 다른 데이터의 요청을 `N` 번 해야하는 경우에 `N` 개의 데이터에 대한 변경 사항은 모두 클라이언트가 영향을 받게 되어 `Repository` 패턴의 목적인 `Data` 레이어와의 결합도를 느슨하게 하는 것과는 반대로 다시 강한 결합이 되어버린다.
