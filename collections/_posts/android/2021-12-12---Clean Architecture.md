@@ -103,9 +103,9 @@ background-position: center center;
 
 
 
-## Recommended Architecture
+## Recommend Architecture
 ***
-`Recommended` 아키텍처는 `Google` 에서 공식적으로 권장하는 안드로이드 앱 개발 방법론이다.
+`Recommend` 아키텍처는 `Google` 에서 공식적으로 권장하는 안드로이드 앱 개발 방법론이다.
 <br/>
 
 `MVVM` 패턴을 기반으로 하며, 데이터와 `UI` 의 분리를 강조하여, `UI` 구성 요소와 비즈니스 로직을 분리해 개발을 용이하게 하는데 목적이 있다.
@@ -117,7 +117,7 @@ background-position: center center;
 클린 아키텍처와 비슷하게 구성될 수 있지만, `Domain` 레이어의 필수 여부에 차이가 있다. 
 <br/>
 
-클린 아키텍처에서는 `Domain` 레이어가 반드시 존재해야 하며, 비즈니스 로직과 `UseCase` 를 처리해야 하지만, `Recommended` 아키텍처에서는 `Domain` 레이어가 선택 사항으로 취급된다.
+클린 아키텍처에서는 `Domain` 레이어가 반드시 존재해야 하며, 비즈니스 로직과 `UseCase` 를 처리해야 하지만, `Recommend` 아키텍처에서는 `Domain` 레이어가 선택 사항으로 취급된다.
 <br/>
 
 <div style="
