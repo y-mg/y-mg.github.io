@@ -64,7 +64,7 @@ fun countUp(): Flow<Int> = flow {
 
 ## collectLatest
 ***
-<code style="color: #eb5657;">collectLatest</code> 는 새로운 데이터가 발행되었을 때 이전 데이터의 처리를 강제로 종료시키고 새로운 데이터를 처리하기 때문에 항상 최신의 데이터를 소비한다.
+<code style="color: #eb5657;">collectLatest</code> 는 새로운 데이터가 발행되었을 때, 이전 데이터의 처리를 강제로 종료시키고 새로운 데이터를 처리하기 때문에 항상 최신의 데이터를 소비한다.
 <br/>
 
 ```kotlin
@@ -97,7 +97,7 @@ fun countUp(): Flow<Int> = flow {
 <br/>
 <br/>
 
-<code style="color: #eb5657;">collectLatest</code> 는 최신의 데이터를 유지하려는 특성이 있지만 이로 인해 데이터를 발행하는 시간 사이의 간격보다 데이터를 처리하는 시간이 오래 걸릴 경우에 새로운 들어오는 데이터는 계속해서 취소되어 중간 데이터를 하나도 얻지 못하고 마지막 데이터만을 받게 된다.
+<code style="color: #eb5657;">collectLatest</code> 는 최신의 데이터를 유지하려는 특성이 있지만, 이로 인해 데이터를 발행하는 시간 사이의 간격보다 데이터를 처리하는 시간이 오래 걸릴 경우에 새로운 들어오는 데이터는 계속해서 취소되어 중간 데이터를 하나도 얻지 못하고 마지막 데이터만을 받게 된다.
 <br/>
 
 ```kotlin

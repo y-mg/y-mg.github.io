@@ -15,7 +15,7 @@ comments: false
 <code style="color: #eb5657;">collectLatest</code> 는 새로운 데이터가 발행되었을 때 이전 데이터의 처리를 강제로 종료시키고 새로운 데이터를 처리하여 항상 최신의 데아터를 소비한다.
 <br/>
 
-이로 인해 <code style="color: #eb5657;">collectLatest</code> 는 데이터를 발행하는 시간 사이의 간격보다 데이터를 처리하는 시간이 오래 걸릴 경우에 새로운 들어오는 데이터는 계속해서 소비되지 못하고 마지막 데이터만 소비하게 된다.
+이로 인해 <code style="color: #eb5657;">collectLatest</code> 는 데이터를 발행하는 시간보다 데이터를 처리하는 시간이 오래 걸릴 경우에 새로운 들어오는 중간의 데이터는 계속해서 소비되지 못하고 마지막 데이터만 소비하게 된다.
 <br/>
 
 ```kotlin
@@ -48,7 +48,10 @@ fun countUp(): Flow<Int> = flow {
 
 ## conflate
 ***
-<code style="color: #eb5657;">Flow</code> 의 <code style="color: #eb5657;">collectLatest</code> 사용 시 데이터를 발행하는 시간 사이의 간격보다 데이터를 처리하는 시간이 오래 걸릴 경우에 새로운 들어오는 데이터는 계속해서 소비되지 못하고 마지막 데이터만 소비하게 되는 문제점을 해결하는 방법은 <code style="color: #eb5657;">conflate</code> 를 사용하여 한 번 시작된 데이터의 소비를 끝날 때 까지 진행하고 데이터의 소비가 완료되는 시점에 가장 최신의 데이터를 다시 소비하는 것이다.
+<code style="color: #eb5657;">conflate</code> 는 한 번 시작된 데이터의 소비를 끝날 때 까지 진행하고 데이터의 소비가 완료되는 시점에 가장 최신의 데이터를 다시 소비하는 것이다.
+<br/>
+
+이로 인해 <code style="color: #eb5657;">collectLatest</code> 의 문제를 해결할 수 있다.
 <br/>
 
 ```kotlin
