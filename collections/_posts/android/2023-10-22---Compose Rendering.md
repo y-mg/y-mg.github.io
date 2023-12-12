@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Compose Rendering"
-date: 2023-09-22T00:00:00Z
+date: 2023-10-22T00:00:00Z
 authors: ["y-mg"]
 categories: [Android, Jetpack]
 description: "Composition / Layout / Drawing"

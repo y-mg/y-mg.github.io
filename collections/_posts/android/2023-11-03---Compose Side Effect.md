@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Compose Side Effect"
-date: 2023-10-03T00:00:00Z
+date: 2023-11-03T00:00:00Z
 authors: ["y-mg"]
 categories: [Android, Jetpack]
 description: "컴포즈에서 UI 의 상태를 변경하는 작업"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Compose State"
-date: 2023-09-25T00:00:00Z
+date: 2023-10-25T00:00:00Z
 authors: ["y-mg"]
 categories: [Android, Jetpack]
 description: "시간에 따라 변할 수 있는 값"
