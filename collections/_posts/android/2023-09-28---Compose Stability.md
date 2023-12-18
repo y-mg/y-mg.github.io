@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Compose Stability"
-date: 2023-10-28T00:00:00Z
+date: 2023-09-28T00:00:00Z
 authors: ["y-mg"]
 categories: [Android, Jetpack]
 description: "Unstable / Stable / Immutable"

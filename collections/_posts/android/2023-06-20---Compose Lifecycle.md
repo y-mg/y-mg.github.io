@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Compose Lifecycle"
-date: 2023-10-20T00:00:00Z
+date: 2023-06-20T00:00:00Z
 authors: ["y-mg"]
 categories: [Android, Jetpack]
 description: "Composition / Recomposition"
