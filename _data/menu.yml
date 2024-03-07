@@ -2,12 +2,9 @@ main:
   - name: Home
     url: /
     weight: 2
-  - name: Android
-    url: /android
+  - name: Develop
+    url: /develop
     weight: 2
     #child:
     #  - name: "Name"
     #    url: /blog/android/basic
-  - name: Kotlin
-    url: /kotlin
-    weight: 2

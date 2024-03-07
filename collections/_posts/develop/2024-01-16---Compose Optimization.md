@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Compose Optimization"
-date: 2023-11-01T00:00:00Z
+date: 2024-01-16T00:00:00Z
 authors: ["y-mg"]
 categories: [Android, Jetpack]
 description: "Compose 성능 최적화 방법"
