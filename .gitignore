@@ -9,7 +9,7 @@
 # Ruby Gem
 *.gem
 .bundle
-#Gemfile.lock
+Gemfile.lock
 **/vendor/bundle
 
 # Node.js and NPM
@@ -28,11 +28,3 @@ Desktop.ini
 .sass-cache
 _asset_bundler_cache
 _site
-
-# Thumbnail cache files
-._*
-Thumbs.db
-
-# Files that might appear on external disks
-.Spotlight-V100
-.Trashes
