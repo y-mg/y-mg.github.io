@@ -4,7 +4,7 @@ title: "Compose State"
 date: 2023-09-20T00:00:00Z
 authors: ["y-mg"]
 categories: [Android, Jetpack]
-description: "시간에 따라 변할 수 있는 값"
+description: "객체의 어떠한 값 또는 데이터"
 thumbnail: "/assets/images/android/banner/jetpack.png"
 image: "/assets/images/android/banner/jetpack.png"
 comments: false
